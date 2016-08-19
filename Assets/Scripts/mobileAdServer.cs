@@ -37,8 +37,10 @@ public class mobileAdServer : MonoBehaviour {
 
     public void FacebookAds()
     {
-        logOutput.text = "Activating Facebook Ads";
-        Debug.Log("Activating Facebook Ads");
+        GameObject.Find("FB_JRG").SendMessage("LoadFBInterstitial");
+
+        logOutput.text = FB_JRG.FBStatusNotifier;
+        Debug.Log(FB_JRG.FBStatusNotifier);
     }
 
     public void HyprMxAds()
