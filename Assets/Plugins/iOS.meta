@@ -1,4 +1,5 @@
 fileFormatVersion: 2
+<<<<<<< HEAD
 guid: 3a31d3967901c42299090a5c0ac019a2
 folderAsset: yes
 timeCreated: 1435699548
@@ -7,3 +8,9 @@ DefaultImporter:
   userData: 
   assetBundleName: 
   assetBundleVariant: 
+=======
+guid: cdfa51a508e8047218f07e201ab95b63
+folderAsset: yes
+DefaultImporter:
+  userData: 
+>>>>>>> Added AppLovin Unity Package and deleted extra Facebook and Audience Network folders

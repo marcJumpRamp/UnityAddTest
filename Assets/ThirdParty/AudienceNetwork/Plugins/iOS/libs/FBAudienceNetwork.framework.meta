@@ -1,8 +1,13 @@
 fileFormatVersion: 2
-guid: 42ea5203ef383ca4eb1cf4ff39225d64
+guid: f4255f4fc7b842f4b8687c63b1902bfd
 folderAsset: yes
+<<<<<<< HEAD
 timeCreated: 1471875773
 licenseType: Free
+=======
+timeCreated: 1471878693
+licenseType: Pro
+>>>>>>> Added AppLovin Unity Package and deleted extra Facebook and Audience Network folders
 PluginImporter:
   serializedVersion: 1
   iconMap: {}
@@ -16,10 +21,13 @@ PluginImporter:
       enabled: 0
       settings:
         DefaultValueInitialized: true
+<<<<<<< HEAD
     iOS:
       enabled: 1
       settings:
         FrameworkDependencies: AdSupport;StoreKit;
+=======
+>>>>>>> Added AppLovin Unity Package and deleted extra Facebook and Audience Network folders
   userData: 
   assetBundleName: 
   assetBundleVariant: 
