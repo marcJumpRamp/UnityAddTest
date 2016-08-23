@@ -19,7 +19,8 @@ public class hyprListener : MonoBehaviour, HyprMediateListener {
 		#if UNITY_IOS
 		apiToken = "87ed7e18-56eb-4972-a2b3-2bf0e9b26970"; // API token for your iOS app
 		#elif UNITY_ANDROID
-		apiToken = "4cbe0ae1-be3a-4815-bd9e-50dc87901568"; // API token for your Android app
+		//apiToken = "4cbe0ae1-be3a-4815-bd9e-50dc87901568"; // Live Android App
+		apiToken = "b76e0c5e-d919-4763-ba54-deda5257ff28"; // Test Android App
 		#endif
 		string userId = "800873486";
 		#if !UNITY_EDITOR

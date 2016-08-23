@@ -13,18 +13,21 @@ public class AdColonyListener : MonoBehaviour {
 	
 	}
 
-	private void playAdd(){
-		bool isVideoAvialable;
+	public  void PlayAdd(){
+		bool isVideoAvialable = false;
+		Debug.Log ("Play Add began");
 		switch (Application.platform)
 		{
 		case RuntimePlatform.IPhonePlayer:
 			Debug.Log ("HAHAHA NO VIDEO");
 			break;
 		case RuntimePlatform.Android:
-			var isVideoAvailable = AdColony.IsVideoAvailable ("vzc2764759bb2b491cbd");
+			Debug.Log ("Activating AdColony Add android func");
+			isVideoAvialable = AdColony.IsVideoAvailable ("vzc2764759bb2b491cbd");
 			break;
 		}
-
+		Debug.Log ("Android Video Add Avaible " + isVideoAvialable);
+		if (isVideoAvialable) AdColony.ShowVideoAd("vzc2764759bb2b491cbd");
 		//vzc2764759bb2b491cbd -- preroll
 
 

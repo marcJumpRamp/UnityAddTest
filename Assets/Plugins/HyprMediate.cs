@@ -178,6 +178,7 @@ public class HyprMediate : MonoBehaviour
 	void NativeInventoryCallback (string callbackString)
 	{
 		if (HyprMediate.listener != null) {
+			Debug.Log ("HyprMX Callback " + callbackString);
 			bool canShowAd = (callbackString == "true");
 			HyprMediate.listener.HyprMediateCanShowAd (canShowAd);
 		}
