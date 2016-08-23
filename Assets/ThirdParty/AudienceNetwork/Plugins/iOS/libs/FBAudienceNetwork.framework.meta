@@ -1,8 +1,6 @@
 fileFormatVersion: 2
-guid: 42ea5203ef383ca4eb1cf4ff39225d64
+guid: f4255f4fc7b842f4b8687c63b1902bfd
 folderAsset: yes
-timeCreated: 1471875773
-licenseType: Free
 PluginImporter:
   serializedVersion: 1
   iconMap: {}
@@ -10,16 +8,12 @@ PluginImporter:
   isPreloaded: 0
   platformData:
     Any:
-      enabled: 0
+      enabled: 1
       settings: {}
     Editor:
       enabled: 0
       settings:
         DefaultValueInitialized: true
-    iOS:
-      enabled: 1
-      settings:
-        FrameworkDependencies: AdSupport;StoreKit;
   userData: 
   assetBundleName: 
   assetBundleVariant: 
