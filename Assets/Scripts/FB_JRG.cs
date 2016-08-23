@@ -2,8 +2,8 @@
 using AudienceNetwork;
 
 public class FB_JRG : MonoBehaviour {
-    public string placementId;
-    public string deviceID;
+    public string placementId = "267948490256774_269167170134906";
+    public string deviceID = "80DA77B329456878";
     static public string FBStatusNotifier;
 
     private InterstitialAd interstitialAd;

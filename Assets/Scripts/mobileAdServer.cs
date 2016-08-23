@@ -21,7 +21,7 @@ public class mobileAdServer : MonoBehaviour {
     {
         GameObject.Find("AppLovin_JRG").SendMessage("loadAppLovinAd");
         logOutput.text = AppLovin_JRG.ALStatusNotifier;
-       // Debug.Log("Activating App Lovin Ads");
+        Debug.Log("Activating App Lovin Ads");
     }
 
     public void AdMarvelAds()
