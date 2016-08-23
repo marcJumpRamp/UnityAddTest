@@ -1,76 +1,188 @@
 <?xml version="1.0" encoding="utf-8"?>
-<manifest xmlns:android="http://schemas.android.com/apk/res/android" package="com.jumprampgames.addemo	 " android:versionCode="1" android:versionName="1.0">
-    <!-- TODO: Replace the 'package' value above to reflect your app's package id. -->
-     <!-- NOTE: Adjust minSDKVersion and targetSdkVersion as desired. -->
-    <!--    <uses-sdk android:minSdkVersion="10" android:targetSdkVersion="19" />-->
-    <!-- NOTE: You must have at least these four permissions for AdColony. -->
-    <uses-permission android:name="android.permission.INTERNET" />
-    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
-    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
-    <uses-permission android:name="android.permission.READ_PHONE_STATE" />
-    <supports-screens
-    android:anyDensity="true"
-    android:largeScreens="true"
-    android:normalScreens="true"
-    android:smallScreens="true"
-    android:xlargeScreens="true" />
-    <uses-feature android:glEsVersion="0x00020000" />
-    
-    <application android:label="@string/app_name" android:icon="@drawable/app_icon" android:hardwareAccelerated="true">
-        <activity android:name="com.unity3d.player.UnityPlayerNativeActivity" android:configChanges="keyboardHidden|orientation|screenSize" android:label="@string/app_name">
-            <intent-filter>
-                <action android:name="android.intent.action.MAIN" />
-                <category android:name="android.intent.category.LAUNCHER" />
-            </intent-filter>
-            <!-- <meta-data android:name="unityplayer.UnityActivity" android:value="true" /> -->
-            <meta-data android:name="unityplayer.ForwardNativeEventsToDalvik" android:value="true" />
-        </activity>
-        
-        <activity android:name="com.applovin.adview.AppLovinInterstitialActivity" />
-        <activity android:name="com.applovin.adview.AppLovinConfirmationActivity" />
-        <!-- NOTE: You must include these three activity specifications for AdColony. -->
-        <activity android:name="com.jirbo.adcolony.AdColonyOverlay" android:configChanges="keyboardHidden|orientation|screenSize" android:theme="@android:style/Theme.Translucent.NoTitleBar.Fullscreen" />
-        <activity android:name="com.jirbo.adcolony.AdColonyFullscreen" android:configChanges="keyboardHidden|orientation|screenSize" android:theme="@android:style/Theme.Black.NoTitleBar.Fullscreen" />
-        <activity android:name="com.jirbo.adcolony.AdColonyBrowser" android:configChanges="keyboardHidden|orientation|screenSize" android:theme="@android:style/Theme.Black.NoTitleBar.Fullscreen" />
-        <activity android:name="com.facebook.unity.FBUnityLoginActivity" android:configChanges="fontScale|keyboard|keyboardHidden|locale|mnc|mcc|navigation|orientation|screenLayout|screenSize|smallestScreenSize|uiMode|touchscreen" android:theme="@android:style/Theme.Translucent.NoTitleBar.Fullscreen" />
-        <activity android:name="com.facebook.unity.FBUnityDialogsActivity" android:configChanges="fontScale|keyboard|keyboardHidden|locale|mnc|mcc|navigation|orientation|screenLayout|screenSize|smallestScreenSize|uiMode|touchscreen" android:theme="@android:style/Theme.Translucent.NoTitleBar.Fullscreen" />
-        <activity android:name="com.facebook.unity.FBUnityAppLinkActivity" android:exported="true" />
-        <activity android:name="com.facebook.unity.FBUnityDeepLinkingActivity" android:exported="true" />
-        <activity android:name="com.facebook.unity.FBUnityGameRequestActivity" />
-        <activity android:name="com.facebook.unity.FBUnityCreateGameGroupActivity" />
-        <activity android:name="com.facebook.unity.FBUnityJoinGameGroupActivity" />
-        <activity android:name="com.facebook.unity.AppInviteDialogActivity" />
-        
-        <activity
-            android:name="com.unity3d.player.UnityPlayerActivity"
-            android:configChanges="fontScale|keyboard|keyboardHidden|locale|mnc|mcc|navigation|orientation|screenLayout|screenSize|smallestScreenSize|uiMode|touchscreen"
-            android:label="@string/app_name"
-            android:screenOrientation="landscape" >
-            <intent-filter>
-                <action android:name="android.intent.action.MAIN" />
-                <category android:name="android.intent.category.LAUNCHER" />
-            </intent-filter>
-        </activity>
-        <activity
-            android:name="com.unity3d.player.VideoPlayer"
-            android:configChanges="fontScale|keyboard|keyboardHidden|locale|mnc|mcc|navigation|orientation|screenLayout|screenSize|smallestScreenSize|uiMode|touchscreen"
-            android:label="@string/app_name"
-            android:screenOrientation="landscape" >
-        </activity>
-        
-        
-        
-        
-        <meta-data android:name="com.facebook.sdk.ApplicationId" android:value="fb267948490256774" />
-<!--        <provider android:name="com.facebook.FacebookContentProvider" android:authorities="com.facebook.app.FacebookContentProvider267948490256774" android:exported="true" />-->
-        android:authorities="@string/content_provider"
-         <provider android:name="com.facebook.FacebookContentProvider" android:authorities="com.jumprampgames.addemo" android:exported="true" />-->
+<manifest xmlns:android="http://schemas.android.com/apk/res/android" 
+package="com.admarvel.unity262" 
+android:installLocation="preferExternal" 
+android:theme="@android:style/Theme.NoTitleBar" 
+android:versionName="1.0" android:versionCode="1">
+  
+  <supports-screens android:smallScreens="true" 
+  android:normalScreens="true" 
+  android:largeScreens="true" 
+  android:xlargeScreens="true" 
+  android:anyDensity="true" />
+  
+  <application 
+  android:icon="@drawable/app_icon" 
+  android:label="JRG add server test" 
+  android:debuggable="true">
+  
+    <activity android:name="com.unity3d.player.UnityPlayerNativeActivity"  android:screenOrientation="landscape|portrait|reverseLandscape|reversePortrait" android:hardwareAccelerated="true" android:configChanges="keyboard|keyboardHidden|orientation|screenSize" android:label="@string/app_name">
+      <intent-filter>
+        <action android:name="android.intent.action.MAIN" />
+        <category android:name="android.intent.category.LAUNCHER" />
+      </intent-filter>
+      <meta-data android:name="unityplayer.UnityActivity" android:value="true" />   
+      <meta-data android:name="unityplayer.ForwardNativeEventsToDalvik" android:value="true" />
+    </activity>       
        
-        <meta-data
-        android:name="applovin.sdk.key"
-        android:value="6zxpa5-1cCTyKN2GsmKVbaVqDNqabuWhrSVQXTR9fw5_I8G8vbeVA8KNW9z61TptxIISnkcReiQxsh4mHiGSsa" />
+    <activity android:name="com.admarvel.android.ads.AdMarvelActivity" android:theme="@android:style/Theme.NoTitleBar.Fullscreen" android:hardwareAccelerated="true" android:configChanges="keyboard|keyboardHidden|orientation|screenSize"> </activity>
+	<provider android:name="com.admarvel.android.ads.AdMarvelLocalFileContentProvider" android:exported="false" android:authorities="com.jumprampgames.addemo.AdMarvelLocalFileContentProvider"/>
+
+
+<!--        <meta-data
+            android:name="com.google.android.gms.version"
+            android:value="@integer/google_play_services_version" />
+-->
+        <!--
+        ADMARVEL:  If you are integrating with Google Play please add below declaration (NOTE:- Google has stopped supporting Admob SDK so 
+        If you were using Admob Before please remove Admob declaration from manifest file and replace it with this ),
+        -->
+        <activity
+            android:name="com.google.android.gms.ads.AdActivity"
+            android:configChanges="keyboard|keyboardHidden|orientation|screenLayout|uiMode|screenSize|smallestScreenSize" />
+
         
+         <!-- ADMARVEL:  If your integrating with Millennial, please define this -->
+
+        <activity
+            android:name="com.millennialmedia.android.MMActivity"
+            android:configChanges="keyboardHidden|orientation|keyboard"
+            android:theme="@android:style/Theme.Translucent.NoTitleBar" >
+        </activity>
         
+
+        <!-- ADMARVEL:  If your integrating with Rhythm, please define this -->
+        <activity
+            android:name="com.rhythmnewmedia.sdk.RhythmActivity"
+            android:configChanges="keyboard|keyboardHidden|orientation"
+            android:label="Rhythm Activity"
+            android:theme="@android:style/Theme.Translucent.NoTitleBar" />
+        <activity
+            android:name="com.rhythmnewmedia.sdk.video.RhythmVideoActivity"
+            android:configChanges="keyboard|keyboardHidden|orientation"
+            android:label="Rhythm Video Activity"
+            android:theme="@android:style/Theme.Black.NoTitleBar" />
+
+        <!-- ADMARVEL:  If your integrating with AdColony, please define this -->
+
+        <activity
+            android:name="com.jirbo.adcolony.AdColonyOverlay"
+            android:configChanges="keyboardHidden|orientation|screenSize"
+            android:theme="@android:style/Theme.Translucent.NoTitleBar.Fullscreen" />
+        <activity
+            android:name="com.jirbo.adcolony.AdColonyFullscreen"
+            android:configChanges="keyboardHidden|orientation|screenSize"
+            android:theme="@android:style/Theme.Black.NoTitleBar.Fullscreen" />
+        <activity
+            android:name="com.jirbo.adcolony.AdColonyBrowser"
+            android:configChanges="keyboardHidden|orientation|screenSize"
+            android:theme="@android:style/Theme.Black.NoTitleBar.Fullscreen" />
+
+        <!-- ADMARVEL:  If your integrating with Amazon, please define this -->
+        <activity
+            android:name="com.amazon.device.ads.AdActivity"
+            android:configChanges="keyboardHidden|orientation|screenSize" />
         
-    </application>
+        <!-- ADMARVEL:  If your integrating with Facebook, please add below declaration -->
+        <activity android:name="com.facebook.ads.InterstitialAdActivity" 
+                  android:configChanges="keyboardHidden|orientation|screenSize" />
+        
+        <!-- ADMARVEL:  If your integrating with InMobi, please add below declaration -->
+        <activity
+            android:name="com.inmobi.androidsdk.IMBrowserActivity" android:hardwareAccelerated="true"
+            android:configChanges="keyboard|keyboardHidden|orientation|screenLayout|uiMode|smallestScreenSize|screenSize" />
+        
+        <!-- <receiver
+            android:name="com.inmobi.commons.analytics.androidsdk.IMAdTrackerReceiver"
+            android:enabled="true"
+            android:exported="true" >
+            <intent-filter>
+                <action android:name="com.android.vending.INSTALL_REFERRER" />
+            </intent-filter>
+        </receiver>
+         -->
+        <service
+            android:name="com.inmobi.commons.internal.ActivityRecognitionManager"
+            android:enabled="true" />
+        
+        <!-- ADMARVEL:  If your integrating with HeyZap, please add below declaration -->
+        
+        <activity android:name="com.heyzap.sdk.ads.HeyzapInterstitialActivity" 
+            android:configChanges="keyboardHidden|orientation|screenSize|smallestScreenSize"
+           	android:exported="false"  />
+ 
+ 		<activity android:name="com.heyzap.sdk.ads.HeyzapVideoActivity" 
+ 		    android:configChanges="keyboardHidden|orientation|screenSize|smallestScreenSize" />
+ 		
+ 		<!-- <receiver android:name="com.heyzap.sdk.ads.PackageAddedReceiver"> 
+			<intent-filter>
+			<data android:scheme="package"/>
+			<action android:name="android.intent.action.PACKAGE_ADDED"/>
+			</intent-filter>
+		</receiver> -->
+		
+		<!-- ADMARVEL:  If your integrating with Unity Ads (Applifier), please add below declaration -->
+<!--		<activity android:name="com.unity3d.ads.android.view.UnityAdsFullscreenActivity" android:configChanges="fontScale|keyboard|keyboardHidden|locale|mnc|mcc|navigation|orientation|screenLayout|screenSize|smallestScreenSize|uiMode|touchscreen"
+			android:theme="@android:style/Theme.NoTitleBar.Fullscreen"
+			android:hardwareAccelerated="true" />
+		-->
+		
+ 		
+<!-- 		  <activity
+              android:name="com.unity3d.ads.android.view.UnityAdsFullscreenActivity"
+              android:configChanges="fontScale|keyboard|keyboardHidden|locale|mnc|mcc|navigation|orientation|screenLayout|screenSize|smallestScreenSize|uiMode|touchscreen"
+              android:theme="@android:style/Theme.NoTitleBar.Fullscreen"
+              android:hardwareAccelerated="true" />
+              -->
+               <activity
+		            android:name="com.admarvel.android.ads.AdMarvelMediationActivity"
+		            android:configChanges="keyboard|keyboardHidden|orientation|screenSize"
+		            android:hardwareAccelerated="true"
+		            android:theme="@android:style/Theme.Translucent.NoTitleBar.Fullscreen"
+		           >
+       			 </activity>
+               <activity
+				 android:name="com.vungle.publisher.FullScreenAdActivity"
+			 	android:configChanges="keyboardHidden|orientation|screenSize"
+			 	android:theme="@android:style/Theme.NoTitleBar.Fullscreen"/>
+		 	
+          		<activity android:name="com.chartboost.sdk.CBImpressionActivity"
+            	   android:excludeFromRecents="true" 
+            	   android:theme="@android:style/Theme.Translucent.NoTitleBar" />	
+              
+              
+  </application>
+  
+  	<uses-sdk android:minSdkVersion="16" android:targetSdkVersion="23" />
+  
+ 
+    <uses-permission android:name="android.permission.INTERNET" />
+    <uses-permission android:name="android.permission.ACCESS_COARSE_LOCATION" />
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
+    <uses-permission android:name="android.permission.ACCESS_WIFI_STATE" />
+    <uses-permission android:name="android.permission.READ_PHONE_STATE" />
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
+    <uses-permission android:name="android.permission.RECORD_AUDIO" />
+    <uses-permission android:name="android.permission.MODIFY_AUDIO_SETTINGS" />
+    <uses-permission android:name="android.permission.VIBRATE" />
+    <uses-permission android:name="android.permission.WAKE_LOCK" />
+    <uses-permission android:name="android.permission.GET_TASKS" />
+    <uses-permission android:name="android.permission.WRITE_CALENDAR" />
+    <uses-permission android:name="android.permission.READ_CALENDAR" />
+    <uses-permission android:name="com.google.android.gms.permission.ACTIVITY_RECOGNITION" />
+    
+    <uses-permission android:name="android.permission.READ_LOGS" />
+
+    <uses-permission android:name="android.permission.WAKE_LOCK" />
+  
+
+    <uses-permission android:name="android.permission.ACCESS_FINE_LOCATION" />
+
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
+    <uses-permission android:name="android.permission.READ_PHONE_STATE" />
+
+
+    <uses-permission android:name="android.permission.CHANGE_WIFI_STATE" />
+
+    
 </manifest>
