@@ -1,8 +1,15 @@
 fileFormatVersion: 2
+<<<<<<< HEAD
 guid: aee4cfd50569b4f75acfffeb799ca7cc
 folderAsset: yes
 timeCreated: 1471980213
 licenseType: Free
+=======
+guid: 70684a290add2864ebaa4f6d66e4d89a
+folderAsset: yes
+timeCreated: 1471974641
+licenseType: Pro
+>>>>>>> Added AppsLovin logic. Still need to set up on dashboard to see ads. Made minor changes to Facebook Ad script.
 DefaultImporter:
   userData: 
   assetBundleName: 

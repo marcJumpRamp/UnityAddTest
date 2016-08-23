@@ -19,7 +19,6 @@ public class mobileAdServer : MonoBehaviour {
 
     public void AppLovinAds()
     {
-        GameObject.Find("AppLovin_JRG").SendMessage("loadAppLovinAd");
         logOutput.text = AppLovin_JRG.ALStatusNotifier;
         Debug.Log("Activating App Lovin Ads");
     }
@@ -38,8 +37,6 @@ public class mobileAdServer : MonoBehaviour {
 
     public void FacebookAds()
     {
-        GameObject.Find("FB_JRG").SendMessage("LoadFBInterstitial");
-
         logOutput.text = FB_JRG.FBStatusNotifier;
         Debug.Log(FB_JRG.FBStatusNotifier);
     }
