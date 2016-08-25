@@ -19,7 +19,7 @@ public class FB_JRG : MonoBehaviour {
 
         this.interstitialAd.InterstitialAdDidLoad = (delegate ()
             {
-               // Debug.Log("Interstitial Ad Loaded");
+                Debug.Log("Interstitial Ad Loaded");
                 FBStatusNotifier = "Interstitial Ad Loaded";        //Announce if the interstitial ad is loaded
                 isLoaded = true;
             }
@@ -39,13 +39,13 @@ public class FB_JRG : MonoBehaviour {
     {
         if (isLoaded)
         {
-           // Debug.Log("Showing interstial from : " + gameObject.name);
+            Debug.Log("Showing interstial from : " + gameObject.name);
             FBStatusNotifier = "Showing interstial from : " + gameObject.name;
             interstitialAd.Show();
-            //Debug.Log("Interstitial Ad is Playing");
+            Debug.Log("Interstitial Ad is Playing");
         }else
         {
-           // Debug.Log("Ad not loaded. Click Load Ad to request an ad");
+            Debug.Log("Ad not loaded. Click Load Ad to request an ad");
             FBStatusNotifier = "Ad not loaded. Click Load Ad to request an ad";
         }
     }
