@@ -67,8 +67,8 @@ public class mobileAdServer : MonoBehaviour {
 
     public void TapJoyAds()
     {
-        logOutput.text = "Activating Tap Joy Ads";
-        Debug.Log("Activating Tap Joy Ads");
+        logOutput.text = tapJoy_JRG.TJStatusNotifier;
+        Debug.Log(tapJoy_JRG.TJStatusNotifier);
     }
 
     public void TremorAds()
