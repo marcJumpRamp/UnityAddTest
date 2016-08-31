@@ -37,8 +37,8 @@ public class mobileAdServer : MonoBehaviour {
 
     public void FacebookAds()
     {
-        logOutput.text = FB_JRG.FBStatusNotifier;
-        Debug.Log(FB_JRG.FBStatusNotifier);
+        logOutput.text = "Activating Facebook Audience Network Ads";
+        Debug.Log("Activating Facebook Audience Network Ads");
     }
 
     public void HyprMxAds()

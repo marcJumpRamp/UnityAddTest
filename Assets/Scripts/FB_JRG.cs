@@ -1,10 +1,11 @@
 ﻿using UnityEngine;
+using UnityEngine.UI;
 using AudienceNetwork;
 
 public class FB_JRG : MonoBehaviour {
     public string placementId = "267948490256774_269167170134906";
     public string deviceID = "80DA77B329456878";
-    static public string FBStatusNotifier;
+    public Text FBLogOutput;
 
     private InterstitialAd interstitialAd;
 
@@ -20,30 +21,30 @@ public class FB_JRG : MonoBehaviour {
 
         this.interstitialAd.InterstitialAdDidLoad = (delegate ()
             {
-                Debug.Log("Interstitial Ad Loaded");
-                FBStatusNotifier = "Interstitial Ad Loaded";        //Announce if the interstitial ad is loaded
+                Debug.Log("Interstitial Ad Loaded call back");
+                FBLogOutput.text = "Interstitial Ad Loaded call back";        //Announce if the interstitial ad is loaded
                 isLoaded = true;
+                PlayFBInterstitial();
             }
         );
 
         this.interstitialAd.InterstitialAdDidFailWithError = (delegate (string error)
         {
             Debug.Log("Interstitial Ad failed to load with error:" + error);
-            FBStatusNotifier = "Interstitial Ad failed to load with error:" + error;
-            Debug.Log("Ad not loaded. Click Facebook to request an ad");
-            FBStatusNotifier = "Ad not loaded. Click Facebook to request an ad";
+            FBLogOutput.text = "Interstitial Ad failed to load with error:" + error;
         });
         
         this.interstitialAd.LoadAd();
-
-        if(isLoaded)
-            PlayFBInterstitial();
+        
     }
 
-    void PlayFBInterstitial()
+    public void PlayFBInterstitial()
     {
-        Debug.Log("Facebook Interstitial Ad is Playing");
-        FBStatusNotifier = "Facebook Interstitial Ad is Playing";
-        interstitialAd.Show();
+        if (isLoaded)
+        {
+            Debug.Log("Facebook Interstitial Ad is Playing");
+            FBLogOutput.text = "Facebook Interstitial Ad is Playing";
+            interstitialAd.Show();
+        }
     }
 }
