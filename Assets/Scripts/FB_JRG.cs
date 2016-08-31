@@ -12,7 +12,8 @@ public class FB_JRG : MonoBehaviour {
 
     public void LoadFBInterstitial()
     {
-        AdSettings.AddTestDevice("deviceID");
+        Debug.Log("Load FB Interstitial");
+        AdSettings.AddTestDevice(deviceID);
         InterstitialAd interstitialAd = new InterstitialAd(placementId);
         this.interstitialAd = interstitialAd;
         this.interstitialAd.Register(gameObject);
@@ -29,24 +30,20 @@ public class FB_JRG : MonoBehaviour {
         {
             Debug.Log("Interstitial Ad failed to load with error:" + error);
             FBStatusNotifier = "Interstitial Ad failed to load with error:" + error;
+            Debug.Log("Ad not loaded. Click Facebook to request an ad");
+            FBStatusNotifier = "Ad not loaded. Click Facebook to request an ad";
         });
-
+        
         this.interstitialAd.LoadAd();
-        PlayFBInterstitial();
+
+        if(isLoaded)
+            PlayFBInterstitial();
     }
 
-    public void PlayFBInterstitial()
+    void PlayFBInterstitial()
     {
-        if (isLoaded)
-        {
-            Debug.Log("Showing interstial from : " + gameObject.name);
-            FBStatusNotifier = "Showing interstial from : " + gameObject.name;
-            interstitialAd.Show();
-            Debug.Log("Interstitial Ad is Playing");
-        }else
-        {
-            Debug.Log("Ad not loaded. Click Load Ad to request an ad");
-            FBStatusNotifier = "Ad not loaded. Click Load Ad to request an ad";
-        }
+        Debug.Log("Facebook Interstitial Ad is Playing");
+        FBStatusNotifier = "Facebook Interstitial Ad is Playing";
+        interstitialAd.Show();
     }
 }

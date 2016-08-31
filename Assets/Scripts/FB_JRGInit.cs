@@ -1,11 +1,10 @@
 ﻿using UnityEngine;
-//using Facebook.Unity;
-using System.Collections;
+using Facebook.Unity;
 
 public class FB_JRGInit : MonoBehaviour {
 
     void Start()
     {
-//        FB.Init();
+        FB.Init();
     }
 }

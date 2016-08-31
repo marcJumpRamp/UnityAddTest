@@ -39,8 +39,12 @@ public class tapJoy_JRG : MonoBehaviour {
         }
 
         if (placeTJAd.IsContentReady())
+        {
             placeTJAd.ShowContent();
-        else {
+            Tapjoy.OnConnectSuccess += connectionMadeTapJoy;
+        }
+        else
+        {
             TJStatusNotifier = "Tapjoy Video was not able to play.";
             Debug.Log("Tapjoy Video was not able to play.");
         }
