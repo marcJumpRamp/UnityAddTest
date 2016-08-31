@@ -65,11 +65,11 @@ public class mobileAdServer : MonoBehaviour {
         Debug.Log("Activating Pretio Ads");
     }
 
-    public void TapJoyAds()
-    {
-        logOutput.text = tapJoy_JRG.TJStatusNotifier;
-        Debug.Log(tapJoy_JRG.TJStatusNotifier);
-    }
+//    public void TapJoyAds()
+//    {
+//        logOutput.text = tapJoy_JRG.TJStatusNotifier;
+//        Debug.Log(tapJoy_JRG.TJStatusNotifier);
+//    }
 
     public void TremorAds()
     {

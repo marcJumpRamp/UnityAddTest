@@ -25,6 +25,22 @@
     <meta-data android:name="com.facebook.sdk.ApplicationId" android:value="fb267948490256774" />
     <provider android:name="com.facebook.FacebookContentProvider" android:authorities="com.facebook.app.FacebookContentProvider267948490256774" android:exported="true" />
     <meta-data android:name="com.google.android.gms.version" android:value="@integer/google_play_services_version" />
+    <activity android:name="com.unity3d.player.UnityPlayerNativeActivity" android:label="@string/app_name">
+      <intent-filter>
+        <action android:name="android.intent.action.MAIN" />
+        <category android:name="android.intent.category.LAUNCHER" />
+      </intent-filter>
+      <meta-data android:name="unityplayer.UnityActivity" android:value="true" /> 
+      <meta-data android:name="unityplayer.ForwardNativeEventsToDalvik" android:value="true" />
+	</activity>
+
+	<activity android:name="com.admarvel.android.ads.AdMarvelActivity"
+	  android:theme="@android:style/Theme.NoTitleBar.Fullscreen"
+	  android:configChanges="keyboard|keyboardHidden|orientation|screenSize"
+	  android:hardwareAccelerated="true"
+	  >
+	</activity>
+	<provider android:name= "com.admarvel.android.ads.AdMarvelLocalFileContentProvider" android:authorities= "com.jumprampgames.addemo.AdMarvelLocalFileContentProvider"  />
     <receiver android:name="com.tapjoy.InstallReferrerReceiver" android:exported="true">
       <intent-filter>
         <action android:name="com.android.vending.INSTALL_REFERRER" />
@@ -37,4 +53,5 @@
   <uses-permission android:name="android.permission.ACCESS_WIFI_STATE" />
   <uses-permission android:name="android.permission.ACCESS_FINE_LOCATION" />
   <uses-permission android:name="android.permission.ACCESS_COARSE_LOCATION" />
+  <uses-permission android:name= "android.permission.WRITE_EXTERNAL_STORAGE" />
 </manifest>
