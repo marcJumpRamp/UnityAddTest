@@ -11,6 +11,7 @@ public class AdMarvelAdListener : MonoBehaviour {
 	string siteId = "148662";
 	readonly Dictionary<string, string> TargetParams = new Dictionary<string, string> { { "targetParamKey", "targetParamValue" } };
 
+	bool ReceivedReward;
 	// Use this for initialization
 	void Start () {
 		
@@ -90,7 +91,7 @@ public class AdMarvelAdListener : MonoBehaviour {
 //				else BusinessLogic.ShowLastMenuView();
 //			}
 			AdClosed = false;
-			RecievedReward = false;
+			ReceivedReward = false;
 		}
 
 		if (FailedToLoad)
@@ -102,7 +103,6 @@ public class AdMarvelAdListener : MonoBehaviour {
 		}
 	}
 
-	bool ReceivedReward;
 	bool ReceivedRewardIsSuccess;
 
 	#if UNITY_ANDROID
