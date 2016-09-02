@@ -1,0 +1,92 @@
+﻿using UnityEngine;
+using UnityEngine.UI;
+using System.Collections;
+
+public class mobileAdServer : MonoBehaviour {
+    public Text logOutput;
+
+    public void WaterFallAds()
+    {
+        logOutput.text = "Waterfall not activated";
+        Debug.Log("Waterfall not activated");
+    }
+
+    public void AdColonyAds()
+    {
+        logOutput.text = "Ad Colony  not activated";
+        Debug.Log("Ad Colony not activated");
+    }
+
+    public void AppLovinAds()
+    {
+        logOutput.text = "App Lovin not activated";
+        Debug.Log("App Lovin not activated");
+    }
+
+    public void AdMarvelAds()
+    {
+        logOutput.text = "Ad Marvel not activated";
+        Debug.Log("Ad Marvel not activated");
+    }
+
+    public void ChartBoostAds()
+    {
+        logOutput.text = "Chart Boost not activated";
+        Debug.Log("Chart Boost not activated");
+    }
+
+    public void FacebookAds()
+    {
+        logOutput.text = "Facebook Audience Network not activated";
+        Debug.Log("Facebook Audience Network not activated");
+    }
+
+    public void HyprMxAds()
+    {
+        logOutput.text = "HyprMx Ads not activated";
+        Debug.Log("HyprMx Ads not activated");
+    }
+
+    public void MediaBrixAds()
+    {
+        logOutput.text = "Media Brix not activated";
+        Debug.Log("Media Brix not activated");
+    }
+
+    public void PretioAds()
+    {
+<<<<<<< HEAD
+        logOutput.text = "Activating Pretio Ads";
+        Debug.Log("Activating Pretio Ads");
+    }
+
+//    public void TapJoyAds()
+//    {
+//        logOutput.text = tapJoy_JRG.TJStatusNotifier;
+//        Debug.Log(tapJoy_JRG.TJStatusNotifier);
+//    }
+=======
+        logOutput.text = "Pretio not activated";
+        Debug.Log("Pretio not activated");
+    }
+>>>>>>> Removed Tapjoy sdk and buttons. Added AppLovin. FIxed Facebook Audience Network
+
+    public void TremorAds()
+    {
+        logOutput.text = "Tremor not activated";
+        Debug.Log("Tremor not activated");
+    }
+
+    public void VungleAds()
+    {
+        logOutput.text = "Vungle not activated";
+        Debug.Log("Vungle");
+    }
+
+    public void QuitAp()
+    {
+        logOutput.text = "Good Bye :)";
+        Debug.Log("Good Bye :)");
+        Application.Quit();
+    }
+}

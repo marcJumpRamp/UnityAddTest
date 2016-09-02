@@ -1,0 +1,72 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android" package="com.jumprampgames.addemo" android:installLocation="preferExternal" android:versionCode="1" android:versionName="1.0">
+  <supports-screens android:anyDensity="true" android:largeScreens="true" android:normalScreens="true" android:smallScreens="true" android:xlargeScreens="true" />
+  <application android:debuggable="false" android:icon="@drawable/app_icon" android:label="@string/app_name">
+    <activity android:name="com.applovin.adview.AppLovinInterstitialActivity" />
+    <activity android:name="com.applovin.adview.AppLovinConfirmationActivity" />
+    <activity android:name="com.unity3d.player.UnityPlayerActivity" android:configChanges="fontScale|keyboard|keyboardHidden|locale|mnc|mcc|navigation|orientation|screenLayout|screenSize|smallestScreenSize|uiMode|touchscreen" android:label="@string/app_name" android:screenOrientation="landscape">
+      <intent-filter>
+        <action android:name="android.intent.action.MAIN" />
+        <category android:name="android.intent.category.LAUNCHER" />
+      </intent-filter>
+    </activity>
+    <activity android:name="com.unity3d.player.VideoPlayer" android:configChanges="fontScale|keyboard|keyboardHidden|locale|mnc|mcc|navigation|orientation|screenLayout|screenSize|smallestScreenSize|uiMode|touchscreen" android:label="@string/app_name" android:screenOrientation="landscape">
+    </activity>
+    <meta-data android:name="applovin.sdk.key" android:value="6zxpa5-1cCTyKN2GsmKVbaVqDNqabuWhrSVQXTR9fw5_I8G8vbeVA8KNW9z61TptxIISnkcReiQxsh4mHiGSsa" />
+    <activity android:name="com.facebook.unity.FBUnityLoginActivity" android:configChanges="fontScale|keyboard|keyboardHidden|locale|mnc|mcc|navigation|orientation|screenLayout|screenSize|smallestScreenSize|uiMode|touchscreen" android:theme="@android:style/Theme.Translucent.NoTitleBar.Fullscreen" />
+    <activity android:name="com.facebook.unity.FBUnityDialogsActivity" android:configChanges="fontScale|keyboard|keyboardHidden|locale|mnc|mcc|navigation|orientation|screenLayout|screenSize|smallestScreenSize|uiMode|touchscreen" android:theme="@android:style/Theme.Translucent.NoTitleBar.Fullscreen" />
+    <activity android:name="com.facebook.unity.FBUnityAppLinkActivity" android:exported="true" />
+    <activity android:name="com.facebook.unity.FBUnityDeepLinkingActivity" android:exported="true" />
+    <activity android:name="com.facebook.unity.FBUnityGameRequestActivity" />
+    <activity android:name="com.facebook.unity.FBUnityCreateGameGroupActivity" />
+    <activity android:name="com.facebook.unity.FBUnityJoinGameGroupActivity" />
+    <activity android:name="com.facebook.unity.AppInviteDialogActivity" />
+    <meta-data android:name="com.facebook.sdk.ApplicationId" android:value="fb267948490256774" />
+    <!-- Facebook Audience Network -->
+    <activity android:name="com.facebook.ads.InterstitialAdActivity" android:configChanges="keyboardHidden|orientation|screenSize" />
+    <!-- Facebook Audience Network -->
+    <!-- Android Studio said this is needed. MF 9/1/16-->
+    <meta-data android:name="com.google.android.gms.version" android:value="@integer/google_play_services_version" />
+<<<<<<< HEAD
+    <activity android:name="com.unity3d.player.UnityPlayerNativeActivity" android:label="@string/app_name">
+      <intent-filter>
+        <action android:name="android.intent.action.MAIN" />
+        <category android:name="android.intent.category.LAUNCHER" />
+      </intent-filter>
+      <meta-data android:name="unityplayer.UnityActivity" android:value="true" /> 
+      <meta-data android:name="unityplayer.ForwardNativeEventsToDalvik" android:value="true" />
+	</activity>
+
+	<activity android:name="com.admarvel.android.ads.AdMarvelActivity"
+	  android:theme="@android:style/Theme.NoTitleBar.Fullscreen"
+	  android:configChanges="keyboard|keyboardHidden|orientation|screenSize"
+	  android:hardwareAccelerated="true"
+	  >
+	</activity>
+	<provider android:name= "com.admarvel.android.ads.AdMarvelLocalFileContentProvider" android:authorities= "com.jumprampgames.addemo.AdMarvelLocalFileContentProvider"  />
+    <receiver android:name="com.tapjoy.InstallReferrerReceiver" android:exported="true">
+      <intent-filter>
+        <action android:name="com.android.vending.INSTALL_REFERRER" />
+      </intent-filter>
+    </receiver>
+=======
+    <!-- Android Studio said this is needed. MF 9/1/16 END-->
+    <provider android:name="com.facebook.FacebookContentProvider" android:authorities="com.facebook.app.FacebookContentProvider267948490256774" android:exported="true" />
+>>>>>>> Removed Tapjoy sdk and buttons. Added AppLovin. FIxed Facebook Audience Network
+  </application>
+  <!-- These permissions are mandatory to run AppLovin SDK -->
+  <uses-permission android:name="android.permission.INTERNET" />
+  <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
+  <!-- These permissions are strongly recommended and will result in higher performance -->
+  <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
+  <uses-permission android:name="android.permission.READ_PHONE_STATE" />
+<<<<<<< HEAD
+  <uses-permission android:name="android.permission.ACCESS_WIFI_STATE" />
+  <uses-permission android:name="android.permission.ACCESS_FINE_LOCATION" />
+  <uses-permission android:name="android.permission.ACCESS_COARSE_LOCATION" />
+  <uses-permission android:name= "android.permission.WRITE_EXTERNAL_STORAGE" />
+=======
+  <uses-feature android:glEsVersion="0x00020000" />
+  <uses-sdk android:minSdkVersion="16" android:targetSdkVersion="23" />
+>>>>>>> Removed Tapjoy sdk and buttons. Added AppLovin. FIxed Facebook Audience Network
+</manifest>

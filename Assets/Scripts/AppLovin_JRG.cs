@@ -1,22 +1,23 @@
 ﻿using UnityEngine;
+using UnityEngine.UI;
 using System.Collections;
 
 public class AppLovin_JRG : MonoBehaviour {
-    static public string ALStatusNotifier;
+    public Text ALLogOutput;
 
     public void loadAppLovinAd()
     {
-        ALStatusNotifier = "Attempting to load Apps Lovin Video";
+        ALLogOutput.text = "Attempting to load Apps Lovin Video";
         Debug.Log("Attempting to load Apps Lovin Video");
         AppLovin.PreloadInterstitial();
 
         if (AppLovin.HasPreloadedInterstitial())
         {
-            ALStatusNotifier = "Apps Lovin Video is playing";
+            ALLogOutput.text = "Apps Lovin Video is playing";
             Debug.Log("Apps Lovin Video is playing");
             AppLovin.ShowInterstitial();
         }
-        else { ALStatusNotifier = "Apps Lovin Video is not available"; Debug.Log("Apps Lovin Video is not available"); }
+        else { ALLogOutput.text = "Apps Lovin Video is not available"; Debug.Log("Apps Lovin Video is not available"); }
     }
 
     void onAppLovinEventReceived(string eventId)
@@ -26,16 +27,16 @@ public class AppLovin_JRG : MonoBehaviour {
         {
             case "HIDDENINTER":
             case "HIDDENREWARDED":
-                ALStatusNotifier = "Apps Lovin Video has been hidden";
+                ALLogOutput.text = "Apps Lovin Video has been hidden";
                 Debug.Log("Apps Lovin Video has been hidden");
                 break;
             case "LOADINTERFAILED":
             case "LOADREWARDEDFAILED":
-                ALStatusNotifier = "Apps Lovin Video failed to load";
+                ALLogOutput.text = "Apps Lovin Video failed to load";
                 Debug.Log("Apps Lovin Video failed to load");
                 break;
             case "REWARDAPPROVED":
-                ALStatusNotifier = "Apps Lovin Rewarded Video has been approved";
+                ALLogOutput.text = "Apps Lovin Rewarded Video has been approved";
                 Debug.Log("Apps Lovin Rewarded Video has been approved");
                 break;
         }

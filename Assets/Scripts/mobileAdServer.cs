@@ -7,80 +7,68 @@ public class mobileAdServer : MonoBehaviour {
 
     public void WaterFallAds()
     {
-        logOutput.text = "Activating Waterfall";
-        Debug.Log("Activating Waterfall");
+        logOutput.text = "Waterfall not activated";
+        Debug.Log("Waterfall not activated");
     }
 
     public void AdColonyAds()
     {
-        logOutput.text = "Activating Ad Colony Ads";
-        Debug.Log("Activating Ad Colony Ads");
+        logOutput.text = "Ad Colony  not activated";
+        Debug.Log("Ad Colony not activated");
     }
 
     public void AppLovinAds()
     {
-        logOutput.text = AppLovin_JRG.ALStatusNotifier;
-        Debug.Log("Activating App Lovin Ads");
+        logOutput.text = "App Lovin not activated";
+        Debug.Log("App Lovin not activated");
     }
 
     public void AdMarvelAds()
     {
-        logOutput.text = "Activating Ad Marvel Ads";
-        Debug.Log("Activating Ad Marvel Ads");
+        logOutput.text = "Ad Marvel not activated";
+        Debug.Log("Ad Marvel not activated");
     }
 
     public void ChartBoostAds()
     {
-        logOutput.text = "Activating Chart Boost Ads";
-        Debug.Log("Activating Chart Boost Ads");
+        logOutput.text = "Chart Boost not activated";
+        Debug.Log("Chart Boost not activated");
     }
 
     public void FacebookAds()
     {
-        logOutput.text = "Activating Facebook Audience Network Ads";
-        Debug.Log("Activating Facebook Audience Network Ads");
+        logOutput.text = "Facebook Audience Network not activated";
+        Debug.Log("Facebook Audience Network not activated");
     }
 
     public void HyprMxAds()
     {
-        logOutput.text = "Activating HyprMx Ads";
-        Debug.Log("Activating HyprMx Ads");
-    }
-
-    public void LiveRailAds()
-    {
-        logOutput.text = "Activating LiveRail Ads";
-        Debug.Log("Activating LiveRail Ads");
+        logOutput.text = "HyprMx Ads not activated";
+        Debug.Log("HyprMx Ads not activated");
     }
 
     public void MediaBrixAds()
     {
-        logOutput.text = "Activating Media Brix Ads";
-        Debug.Log("Activating Media Brix Ads");
+        logOutput.text = "Media Brix not activated";
+        Debug.Log("Media Brix not activated");
     }
 
     public void PretioAds()
     {
-        logOutput.text = "Activating Pretio Ads";
-        Debug.Log("Activating Pretio Ads");
+        logOutput.text = "Pretio not activated";
+        Debug.Log("Pretio not activated");
     }
-
-//    public void TapJoyAds()
-//    {
-//        logOutput.text = tapJoy_JRG.TJStatusNotifier;
-//        Debug.Log(tapJoy_JRG.TJStatusNotifier);
-//    }
 
     public void TremorAds()
     {
-        logOutput.text = "Activating Tremor Ads";
-        Debug.Log("Activating Tremor Ads");
+        logOutput.text = "Tremor not activated";
+        Debug.Log("Tremor not activated");
     }
 
     public void VungleAds()
     {
-        logOutput.text = "Activating Vungle Ads";
-        Debug.Log("Activating Vungle Ads");
+        logOutput.text = "Vungle not activated";
+        Debug.Log("Vungle");
     }
 
     public void QuitAp()
