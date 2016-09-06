@@ -1,6 +1,5 @@
 ﻿using UnityEngine;
 using UnityEngine.UI;
-using System.Collections;
 
 public class AppLovin_JRG : MonoBehaviour {
     public Text ALLogOutput;

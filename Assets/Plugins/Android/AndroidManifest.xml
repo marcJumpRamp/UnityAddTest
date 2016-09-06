@@ -38,7 +38,15 @@
       <meta-data android:name="unityplayer.UnityActivity" android:value="true" /> 
       <meta-data android:name="unityplayer.ForwardNativeEventsToDalvik" android:value="true" />
 	</activity>
-
+    <!--CHARTBOOST START-->
+    <activity android:name="com.chartboost.sdk.CBImpressionActivity"
+          android:excludeFromRecents="true"
+          android:hardwareAccelerated="true"
+          android:theme="@android:style/Theme.Translucent.NoTitleBar.Fullscreen"
+          android:configChanges="keyboardHidden|orientation|screenSize"/>
+    <!-- Required by Chartboost -->
+    <meta-data android:name="com.google.android.gms.version" android:value="@integer/google_play_services_version" />
+    <!--CHARTBOOST END-->
 	<activity android:name="com.admarvel.android.ads.AdMarvelActivity"
 	  android:theme="@android:style/Theme.NoTitleBar.Fullscreen"
 	  android:configChanges="keyboard|keyboardHidden|orientation|screenSize"
@@ -47,10 +55,8 @@
 	</activity>
 	<provider android:name= "com.admarvel.android.ads.AdMarvelLocalFileContentProvider" android:authorities= "com.jumprampgames.addemo.AdMarvelLocalFileContentProvider"  />
   </application>
-  <!-- These permissions are mandatory to run AppLovin SDK -->
+ 
   <uses-permission android:name="android.permission.INTERNET" />
-  <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
-  <!-- These permissions are strongly recommended and will result in higher performance -->
   <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
   <uses-permission android:name="android.permission.READ_PHONE_STATE" />
   <uses-permission android:name="android.permission.ACCESS_WIFI_STATE" />
