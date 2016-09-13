@@ -1,0 +1,6 @@
+framework module TremorVideoAd {
+  umbrella header "TremorVideoAd.h"
+
+  export *
+  module * { export * }
+}
